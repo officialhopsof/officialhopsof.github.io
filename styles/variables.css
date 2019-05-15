@@ -1,0 +1,8 @@
+:root {
+    --font-title: 'Arvo', serif;
+    --font-body: "Droid Sans", Helvetica, Arial, sans-serif;
+    --color-primary: rgb(24, 62, 230);
+    --color-secondary: #ee4f4f;
+    --color-black: #000000;
+    --color-white: #ffffff;
+}

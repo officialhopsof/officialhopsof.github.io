@@ -1,0 +1,11 @@
+
+
+.Content {
+    background-color: #ffffff;
+    padding: 30px 20px 50px 20px;
+}
+
+.Content .Content-container {
+    max-width: 768px;
+    margin: 0 auto;
+}

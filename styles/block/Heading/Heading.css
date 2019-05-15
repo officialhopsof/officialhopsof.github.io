@@ -1,0 +1,27 @@
+
+.Heading {
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: var(--color-primary);
+    padding: 10px 15px;
+}
+
+.Heading .Heading-title {
+    font-family: var(--font-title);
+    font-weight: 400;
+    font-size: 30pt;
+    line-height: 1.5em;
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 768px) {
+    .Heading {
+        padding: 5px 15px;
+    }
+    
+    .Heading .Heading-title {
+        font-size: 20pt;
+    }
+}
