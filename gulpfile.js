@@ -91,20 +91,30 @@ function buildCss() {
 }
 
 function watchCss() {
+    buildCss();
+
     return gulp
         .watch('styles/**/*.css', buildCss)
         .on('change', function(e) {log("Css File Changed: " + e.path)});
 }
 
 function buildPages() {
-    return gulp.src('templates/*.twig')
+    gulp.src('templates/blog/*.twig')
     .pipe(twig({data: {}}))
-    .pipe(gulp.dest('bin/'));
+    .pipe(gulp.dest('bin/blog'))
+    .on('end', function(e) {log("    Done Building Blog!")});;
+
+    return gulp.src(['templates/*.twig'])
+    .pipe(twig({data: {}}))
+    .pipe(gulp.dest('bin/'))
+    .on('end', function(e) {log("    Done Building Pages!")});;
 }
 
 function watchPages() {
+    buildPages(); 
+
     return gulp
-        .watch(['build/styles/**/*.css', 'templates/*.twig'], function(){buildCss(); buildPages();})
+        .watch('templates/**/*.twig', function(){buildPages();})
         .on('change', function(e) {log("File Changed: " + e.path)});
 }
 

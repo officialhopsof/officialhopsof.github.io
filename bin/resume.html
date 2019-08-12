@@ -1,7 +1,3 @@
-{% block nav %}
-{% set selected_page='home' %}
-{% endblock %}
-
 <!doctype html>
 <html amp lang="en">
   <head>
@@ -27,8 +23,7 @@
     <link href="https://fonts.googleapis.com/css?family=Arvo|Open+Sans" rel="stylesheet">
  
     <style>
-      {% include "style.css" %}
-    </style>
+          </style>
   </head>
   <body class="Body">
     <div class="Heading">
@@ -36,18 +31,22 @@
     </div>
     <div class="Nav">
       <div class="Nav-container">
-        <a class="Nav-link {% if selected_page='home' %}Nav-selected{% endif %}" href="/index.html">Home</a>
-        <a class="Nav-link {% if selected_page='about' %}Nav-selected{% endif %}" href="/about.html">About</a>
+        <a class="Nav-link Nav-selected" href="index.html">Home</a>
+        <a class="Nav-link" href="resume.html">Resume</a>
       </div>
     </div>
     <div class="Content">
-      
-      <div class="Content-container">
-        <h1 class="Headline Headline--1">{% block page_title %}{% endblock %}</h1>
-      </div>
-      
-      {% block content %}
-      {% endblock %}
+          <div class="Content-container">
+    <h1 class="Headline Headline--1">Foreward: </h1>
+    <div>
+        <p class="BodyText BodyText--2 u-textJustify">
+            Statistical analysis would suggest I am not a particularly noteworthy developer; however, the experiences I have had to bring me to where I am today are likely, at least a little, unique. Given this, I hope you can take some value in me sharing my perspective. 
+        </p>
+        <p class="BodyText BodyText--2 u-textJustify">
+            This is a series of living documents that should get updated as my thoughts grow and change. Please do not take them as absolute truths.
+        </p>
+    </div>
+    </div>
     </div>
     <div class="Footer">
       <span class="Footer-text">© 2019 Brandon Murphy</span>

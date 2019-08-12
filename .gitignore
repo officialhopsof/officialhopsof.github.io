@@ -1,13 +1,4 @@
-*.pyc
-node_modules
-.vscode/
-main/static/**/*
-npm-debug.log
-db_dir/
-env/
-*.*#
-media/**/*
-postgresdata/
-release/
-build.metadata
-bin/
+_site
+.sass-cache
+.jekyll-metadata
+node_modules/

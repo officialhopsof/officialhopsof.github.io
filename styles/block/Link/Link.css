@@ -1,0 +1,36 @@
+
+
+.Link {
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.Link:link {
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.Link:visited {
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.Link:hover {
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-black);
+}
+
+.Link:active {
+    cursor: pointer;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--color-black);
+}

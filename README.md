@@ -1,7 +1,8 @@
 # Setup
 
 1. `npm install http-server`
-1. `./node_modules/.bin/http-server .`
+1. `./node_modules/.bin/http-server ./bin/`
+1. `http://localhost:8080/`
 
 1. `sudo apt-get install nodejs npm`
 1. `cd $RT_HOME`
@@ -24,3 +25,6 @@
 1. `npm install --save-dev scp`
 1. `npm install --save-dev ssh-exec`
 1. `npm install --save-dev gulp-twig`
+
+`gulp build_css; gulp watch_css;`
+`gulp build_pages; gulp watch_pages;`
