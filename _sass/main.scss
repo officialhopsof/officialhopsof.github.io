@@ -1,0 +1,276 @@
+@charset "utf-8";
+
+// Define defaults for each variable.
+
+$base-font-title: 'Arvo', serif !default;
+$base-font-body: "Droid Sans", Helvetica, Arial, sans-serif !default;
+$base-font-size:   20px !default;
+$base-font-weight: 400 !default;
+$base-line-height: 1.5 !default;
+$spacing-unit:     30px !default;
+
+$text-color:       #111 !default;
+$background-color: #fdfdfd !default;
+$brand-color:      rgb(24, 62, 230) !default;
+
+$red-color:       #ee4f4f !default;
+$red-color-light: lighten($red-color, 40%) !default;
+$red-color-dark:  darken($red-color, 25%) !default;
+
+$screen-width-mobile: 768px;
+
+$table-text-align: left !default;
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//   .wrapper {
+//     padding-right: $spacing-unit / 2;
+//     padding-left: $spacing-unit / 2;
+//   }
+// }
+// @mixin media-query($device) {
+//   @media screen and (max-width: $device) {
+//     @content;
+//   }
+// }
+
+// @mixin relative-font-size($ratio) {
+//   font-size: $base-font-size * $ratio;
+// }
+
+// Import partials.
+// @import
+//   "minima/base",
+//   "minima/layout",
+//   "minima/syntax-highlighting"
+// ;
+
+/////////////////////////////
+// Body
+Body {
+  margin: 0;
+  padding: 0;
+  background-color: $text-color;
+}
+
+/////////////////////////////
+// BodyText
+.BodyText {
+  color: $text-color;
+  font-family: $base-font-body;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+}
+
+.BodyText--1 {
+  font-size: $base-font-size*1.5;
+}
+
+.BodyText--2 {
+  font-size: $base-font-size*1.25;
+}
+
+.BodyText--3 {
+  font-size: $base-font-size;
+}
+
+
+////////////////////////////
+// Content
+.Content {
+  background-color: $background-color;
+  padding: 30px 20px 50px 20px;
+}
+
+.Content .Content-container {
+  max-width: $screen-width-mobile;
+  margin: 0 auto;
+}
+
+////////////////////////////// 
+// Footer
+.Footer {
+  background-color: $text-color;
+  padding: 35px;
+  text-align: center;
+}
+
+.Footer .Footer-text {
+  color: $background-color;
+  // font-size: 15pt;
+  // line-height: 1.5em;
+  font-family: $base-font-body;
+}
+
+.Footer .Footer-social {
+  max-width: 400px;
+  display: flex;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding: 30px 0 0 0;
+}
+
+////////////////////////////// 
+// Heading
+.Heading {
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
+  background-color: $brand-color;
+  padding: 10px 15px;
+}
+
+.Heading .Heading-title {
+  font-family: $base-font-title;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size*1.75;
+  line-height: $base-line-height;
+  color: $background-color;
+}
+
+@media only screen and (max-width: $screen-width-mobile) {
+  .Heading {
+      padding: 5px 15px;
+  }
+  
+  .Heading .Heading-title {
+      font-size: 20pt;
+  }
+}
+
+////////////////////////////////////// 
+// Headline
+.Headline {
+  font-family: $base-font-title;
+  font-weight: $base-font-weight*1.75;
+  line-height: $base-line-height;
+}
+
+.Headline--1 {
+  font-size: $base-font-size*1.5;
+}
+
+.Headline--2 {
+  font-size: $base-font-size*1.25;
+}
+
+.Headline--3 {
+  font-size: $base-font-size;
+}
+
+////////////////////////////////////////// 
+// Icon
+.Icon--social {
+  width: 50px;
+  height: 50px;
+}
+
+/////////////////////////////////////////// 
+// Link
+.Link {
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+}
+
+.Link:link {
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+}
+
+.Link:visited {
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+}
+
+.Link:hover {
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+}
+
+.Link:active {
+  cursor: pointer;
+  text-decoration: none;
+  cursor: pointer;
+  color: $text-color;
+}
+
+/////////////////////////////////////////////////// 
+// Nav
+.Nav {
+  background-color: $background-color;
+}
+
+.Nav .Nav-container {
+  padding-left: 50px;
+  max-width: $screen-width-mobile;
+  margin: 0 auto;
+}
+
+.Nav .Nav-link {
+  font-family: $base-font-title;
+  font-weight: $base-font-weight;
+  font-size: $base-font-size*1.25;
+  line-height: $base-line-height;
+  color: $text-color;
+  padding: 0 10px;
+  text-decoration: none;
+  cursor: pointer;
+  border-bottom: 6px solid $background-color;
+}
+
+.Nav .Nav-link:hover {
+  color: $red-color;
+  border-bottom: 6px solid $red-color;
+}
+
+@media only screen and (max-width: $screen-width-mobile) {
+  .Nav .Nav-container {
+      margin: 0;
+      display: flex;
+      justify-content: space-around;
+      padding-left: 0;
+  }
+}
+
+
+//////////////////////////////////////////
+// HTML STYLES
+h1 {
+  @extend .Headline;
+  @extend .Headline--1;
+}
+
+h2 {
+  @extend .Headline;
+  @extend .Headline--2;
+}
+
+h3 {
+  @extend .Headline;
+  @extend .Headline--3;
+}
+
+span {
+  @extend .BodyText;
+  @extend .BodyText--3;
+}
+
+p {
+  @extend .BodyText;
+  @extend .BodyText--3;
+  text-align: justify;
+}
+
+a {
+  @extend .Link;
+}

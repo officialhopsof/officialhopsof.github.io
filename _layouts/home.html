@@ -1,0 +1,32 @@
+---
+layout: default
+---
+
+<div class="Content-container">
+  {%- if page.title -%}
+    <h1>{{ page.title }}</h1>
+  {%- endif -%}
+
+  {{ content }}
+
+  {%- if site.topics.size > 0 -%}
+    <h2>{{ page.list_title | default: "Topics" }}</h2>
+    <ul>
+      {%- for topic in site.topics -%}
+      <li>
+        {% comment %} {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+        <span>{{ post.date | date: date_format }}</span> {% endcomment %}
+        <h3>
+          <a href="{{ topic.url | relative_url }}">
+            {{ topic.title | escape }}
+          </a>
+        </h3>
+        {%- if site.show_excerpts -%}
+          {{ topic.excerpt }}
+        {%- endif -%}
+      </li>
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+</div>
