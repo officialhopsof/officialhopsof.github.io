@@ -194,7 +194,7 @@ Body {
   cursor: pointer;
   text-decoration: none;
   cursor: pointer;
-  color: $text-color;
+  color: $red-color;
 }
 
 .Link:active {
@@ -253,6 +253,8 @@ h1 {
 h2 {
   @extend .Headline;
   @extend .Headline--2;
+  border-bottom: 3px solid $text-color;
+  padding-top: 15px;
 }
 
 h3 {
@@ -271,6 +273,27 @@ p {
   text-align: justify;
 }
 
+p img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+}
+
 a {
+  @extend .BodyText;
+  @extend .BodyText--3;
   @extend .Link;
+}
+
+
+blockquote {
+  border-left: .25em solid #dfe2e5;
+  padding: 0 1em;
+}
+
+blockquote p {
+  text-align: justify;
+  font-style: italic;
+  color: #6a737d;
 }
