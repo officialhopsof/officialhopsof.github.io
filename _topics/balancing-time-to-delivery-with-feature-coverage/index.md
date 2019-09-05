@@ -2,6 +2,7 @@
 layout: topic
 title:  "Balancing Time to Delivery with Feature Coverage"
 categories: project_management consumer_focus
+permalink: /balancing-time-to-delivery-with-feature-coverage/
 last_modified_at: 30-08-2019
 comments: true
 ---
