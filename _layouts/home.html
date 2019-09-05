@@ -36,18 +36,17 @@ layout: default
     <h2>{{ page.list_title | default: "Upcoming Topics" }}</h2>
     <ul>
       {%- for topic in site.topics -%}
-        {% if !topic.published %}
+        {%- if topic.published == false -%}
           <li>
             {% comment %} {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
             <span>{{ post.date | date: date_format }}</span> {% endcomment %}
             <h3>
-              {{ topic.title | escape }}
+              <a href="{{ topic.url }}">
+                {{ topic.title | escape }}
+              </a>
             </h3>
-            {%- if site.show_excerpts -%}
-              {{ topic.excerpt }}
-            {%- endif -%}
           </li>
-        {% endif %}
+        {%- endif -%}
       {%- endfor -%}
     </ul>
   {%- endif -%}
