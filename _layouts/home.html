@@ -19,7 +19,7 @@ layout: default
             <span>{{ post.date | date: date_format }}</span> {% endcomment %}
             <h3>
               <a href="{{ topic.url }}">
-                {{ topic.title | escape }} (Last Modified: {{ topic.last_modified_at }})
+                {{ topic.title | escape }}
               </a>
             </h3>
             {%- if site.show_excerpts -%}
