@@ -13,18 +13,41 @@ layout: default
     <h2>{{ page.list_title | default: "Topics" }}</h2>
     <ul>
       {%- for topic in site.topics -%}
-      <li>
-        {% comment %} {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
-        <span>{{ post.date | date: date_format }}</span> {% endcomment %}
-        <h3>
-          <a href="{{ topic.url }}">
-            {{ topic.title | escape }} (Last Modified: {{ topic.last_modified_at }})
-          </a>
-        </h3>
-        {%- if site.show_excerpts -%}
-          {{ topic.excerpt }}
-        {%- endif -%}
-      </li>
+        {% if topic.published %}
+          <li>
+            {% comment %} {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span>{{ post.date | date: date_format }}</span> {% endcomment %}
+            <h3>
+              <a href="{{ topic.url }}">
+                {{ topic.title | escape }} (Last Modified: {{ topic.last_modified_at }})
+              </a>
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ topic.excerpt }}
+            {%- endif -%}
+          </li>
+        {% endif %}
+      {%- endfor -%}
+    </ul>
+  {%- endif -%}
+
+
+  {%- if site.topics.size > 0 -%}
+    <h2>{{ page.list_title | default: "Upcoming Topics" }}</h2>
+    <ul>
+      {%- for topic in site.topics -%}
+        {% if !topic.published %}
+          <li>
+            {% comment %} {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+            <span>{{ post.date | date: date_format }}</span> {% endcomment %}
+            <h3>
+              {{ topic.title | escape }}
+            </h3>
+            {%- if site.show_excerpts -%}
+              {{ topic.excerpt }}
+            {%- endif -%}
+          </li>
+        {% endif %}
       {%- endfor -%}
     </ul>
   {%- endif -%}

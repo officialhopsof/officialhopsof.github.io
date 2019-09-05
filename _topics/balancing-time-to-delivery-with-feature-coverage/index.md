@@ -5,6 +5,7 @@ categories: project_management consumer_focus
 permalink: /topics/balancing-time-to-delivery-with-feature-coverage/
 last_modified_at: 30-08-2019
 comments: true
+published: true
 ---
 
 <!-- Multiplexer example is confusing, include more context in the mock
