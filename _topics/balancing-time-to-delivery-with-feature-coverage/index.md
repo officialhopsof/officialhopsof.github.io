@@ -6,9 +6,14 @@ last_modified_at: 30-08-2019
 comments: true
 ---
 
+<!-- Multiplexer example is confusing, include more context in the mock
+    define uberization
+    optimize for mean time to recovery not mean time between failures
+    specify why "amazon comes to mind" -->
+
 ## Forward
 
-Everything to follow is my opinion. It is the accumulation of things I have learned over the first 10 years of my career and should be taken with skeptically. I invite you to read through these thoughts and form your own opinions. Push back against things that do not make sense and do what you think is best for you, your career, and your company.
+Everything to follow is my opinion. It is the accumulation of things I have learned over the first 10 years of my career and should be taken skeptically. I invite you to read through these thoughts and form your own opinions. Push back against things that do not make sense and do what you think is best for you, your career, and your company.
 
 <img alt="Jeff Bridges as &quot;The Dude&quot; says, &quot;Yeah, well. That's just like your opinion, man.&quot;" src="https://media.giphy.com/media/26BRrSvJUa0crqw4E/giphy.gif">
 
