@@ -88,6 +88,38 @@ Body {
   margin: 0 auto;
 }
 
+.post-content div {
+  display: flex;
+  flex-direction: row;
+}
+
+.post-content div :first-child {
+  padding-right: 15px;
+  padding-bottom: 0;
+}
+
+.post-content div :last-child {
+  padding-left: 15px;
+  padding-top: 0;
+}
+
+@media only screen and (max-width: $screen-width-mobile) {
+  .post-content div {
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .post-content div :first-child {
+    padding-right: 0;
+    padding-bottom: 15px;
+  }
+  
+  .post-content div :last-child {
+    padding-left: 0;
+    padding-top: 15px;
+  }
+}
+
 /////////////////////////////// 
 // Disqus
 .Disqus {
@@ -273,6 +305,7 @@ h3 {
 span {
   @extend .BodyText;
   @extend .BodyText--3;
+  text-align: justify;
 }
 
 p {
@@ -305,3 +338,4 @@ blockquote p {
   font-style: italic;
   color: #6a737d;
 }
+
